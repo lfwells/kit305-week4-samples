@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity()
         setContentView(ui.root)
 
         ui.btnCharacterSelect.setOnClickListener {
-            var intent = Intent(this, CharacterSelectActivity::class.java) //this line is the same as the tutorials
+            val intent = Intent(this, CharacterSelectActivity::class.java) //this line is the same as the tutorials
             getCharacter.launch(intent)
         }
     }
