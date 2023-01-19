@@ -33,6 +33,7 @@ android {
     buildFeatures {	//<--
         viewBinding true	//<-- Add these three lines
     }
+    namespace 'au.edu.utas.lfwells.week4'
 }
 
 dependencies {
