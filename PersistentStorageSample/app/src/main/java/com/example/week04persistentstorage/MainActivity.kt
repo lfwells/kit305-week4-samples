@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
         ui = ActivityMainBinding.inflate(layoutInflater)
         setContentView(ui.root)
 
-        var settings = getSharedPreferences(PREFERENCES_FILE, Context.MODE_PRIVATE)
+        val settings = getSharedPreferences(PREFERENCES_FILE, Context.MODE_PRIVATE)
         ui.lblName.text = settings.getString(USERNAME_KEY, "default value")
 
-        ui.txtName.setOnEditorActionListener { v, actionId, event ->
+        ui.txtName.setOnEditorActionListener { _, _, _ ->
             with (settings.edit()) {
                 putString(USERNAME_KEY, ui.txtName.text.toString())
                 apply()
